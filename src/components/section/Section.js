@@ -3,13 +3,25 @@ import './Section.css';
 
 class Section extends Component {
     render(){
-        if(this.props.background){
-            var style = {
-                backgroundColor: this.props.background
-            }
-           
+
+        var gradientProp = String(this.props.backgroundGradient);
+        var gradientValues = gradientProp.split(",");
+        
+        
+        
+        var style = {};
+
+        if(this.props.backgroundColor){
+            style.backgroundColor = this.props.backgroundColor;
+                
+            
+        }else if(this.props.backgroundGradient){
+            style.backgroundImage = 'linear-gradient('+ gradientValues[0] + ', ' + gradientValues[1] + ', ' + gradientValues[2] + ')';
+            
         }
-        return <div className="Section" style={style}></div>;
+
+        console.log(style);
+        return <div className="Section" style={style}>{this.props.children}</div>;
     }
 }
 
