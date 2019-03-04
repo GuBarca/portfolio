@@ -9,4 +9,9 @@
     background-repeat: no-repeat;
 }
 
+.circular-button-image:hover{
+    background-color: #0042EB;
+    transition: .3s;
+}
+
 

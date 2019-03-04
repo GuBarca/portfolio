@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet'
 import Section from './components/section/Section';
 import BigText from './components/text/BigText';
 import Subtitle from './components/text/Subtitle';
@@ -19,18 +20,38 @@ import Line from './components/line/Line';
 import CircularButtonImage from './components/button/CircularButtonImage';
 import Linkedin from './assets/images/linked-in-logo.png';
 import Github from './assets/images/github-logo.png';
-import './App.css';
 import Wrapper from './components/wrapper/Wrapper';
+import Computer from './assets/images/software2.png';
+import LabGenius from './assets/images/labgenius.jpg';
+import Coradini from './assets/images/coradini.jpg';
+import Betos from './assets/images/betos.jpg'
+import Artesinai from './assets/images/artesinai.jpg';
+import Mail from './assets/images/envelope.png';
+import ReactLogo from './assets/images/react.png';
+import './App.css';
+
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Gustavo Barca</title>
+        </Helmet>
         <Section backgroundColor="white">
           <Container><img src={Logo} width="40"></img></Container>
           <Container>
             <BigText color="black" align="center">Designer, Web & Software developer.</BigText>
             <Subtitle align="center">Desenvolvo e crio umas coisas ai.</Subtitle>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Image align="center" path={Computer} width="400px"></Image>
           </Container>
         </Section>
 
@@ -119,31 +140,41 @@ class App extends Component {
 
           </Container>
         </Section>
-        <Section height="500px">
+        <Section height="500px" >
           <br></br>
           <br></br>
           <br></br>
           <br></br>
           <BigText color="black" align="center">Trabalhos recentes</BigText>
           <GridContainer>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
+            <GridBlock Link="" backgroundImage={LabGenius} previewText="Desenvolvimento da aplicação web."/>
+            <GridBlock Link="https://www.facebook.com/betoscabeleireirosnovaodessa/" backgroundImage={Betos} previewText="Identidade visual e artes publicitárias."/>
+            <GridBlock Link="" backgroundImage={Artesinai} previewText="Desenvolvedor do Site."/>
+            <GridBlock Link="https://www.facebook.com/coradiniimoveis/" backgroundImage={Coradini} previewText="Identidade visual e artes publicitárias."/>
           </GridContainer>
           <br></br>
           <br></br>
           <br></br>
         </Section>
         <Line/>
-        <Section height="500px">
-          <RegularText mtop="100px" color="black" align="center">Conheça mais de mim!</RegularText>
+        <Section height="500px" >
+          <MediumText marginTop="100px" color="#0042EB" align="center">Conheça mais de mim!</MediumText>
+          <Subtitle align="center">Acesse minhas outras redes sociais e veja mais:</Subtitle>
           <Container>
             <Wrapper align="xcenter">
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Logo}/>
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Linkedin}/>
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Github}/>
+              <CircularButtonImage Link="mailto:gustavogb2@gmail.com" margin="20px" size="60px" color="#0042EB" backgroundImage={Mail}/>
+              <CircularButtonImage Link="https://www.linkedin.com/in/gustavo-barca/" margin="20px" size="60px" color="#0042EB" backgroundImage={Linkedin}/>
+              <CircularButtonImage Link="https://github.com/GuBarca" margin="20px" size="60px" color="#0042EB" backgroundImage={Github}/>
             </Wrapper>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Paragraph color="#0042EB" align="center">Site feito por mim: Gustavo Barca</Paragraph>
+            <br></br>
+            <br></br>
+            <Paragraph align="center">Made with</Paragraph>
+            <Image align="center" path={ReactLogo} width="100px"/>
+            
           </Container>
         </Section>
 
