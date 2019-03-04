@@ -7,9 +7,13 @@ class Section extends Component {
         var gradientProp = String(this.props.backgroundGradient);
         var gradientValues = gradientProp.split(",");
         
-        
-        
         var style = {};
+
+        if(!this.props.height){
+            style.minHeight = "100vh";
+        }else{
+            style.minHeight = this.props.height;
+        }
 
         if(this.props.backgroundColor){
             style.backgroundColor = this.props.backgroundColor;
@@ -19,8 +23,6 @@ class Section extends Component {
             style.backgroundImage = 'linear-gradient('+ gradientValues[0] + ', ' + gradientValues[1] + ', ' + gradientValues[2] + ')';
             
         }
-
-        console.log(style);
         return <div className="Section" style={style}>{this.props.children}</div>;
     }
 }

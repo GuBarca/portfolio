@@ -7,6 +7,9 @@ class RegularText extends Component {
         if(this.props.color){
             style.color = this.props.color
         }
+        if(this.props.mtop){
+            style.marginTop = this.props.mtop;
+        }
         return(
             <h2 align={this.props.align} style={style} className="RegularText">{this.props.children}</h2>
         );
