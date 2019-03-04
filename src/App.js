@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet'
 import Section from './components/section/Section';
 import BigText from './components/text/BigText';
 import Subtitle from './components/text/Subtitle';
@@ -21,8 +22,10 @@ import Linkedin from './assets/images/linked-in-logo.png';
 import Github from './assets/images/github-logo.png';
 import Wrapper from './components/wrapper/Wrapper';
 import Computer from './assets/images/software2.png';
-import Data from './assets/images/data.svg';
-import Svg from './components/image/Svg';
+import LabGenius from './assets/images/labgenius.jpg';
+import Coradini from './assets/images/coradini.jpg';
+import Betos from './assets/images/betos.jpg'
+import Artesinai from './assets/images/artesinai.jpg';
 import './App.css';
 
 
@@ -30,6 +33,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Gustavo Barca</title>
+        </Helmet>
         <Section backgroundColor="white">
           <Container><img src={Logo} width="40"></img></Container>
           <Container>
@@ -43,7 +49,7 @@ class App extends Component {
             <br></br>
             <br></br>
             <br></br>
-            <Svg align="center" path={Computer} width="400px"></Svg>
+            <Image align="center" path={Computer} width="400px"></Image>
           </Container>
         </Section>
 
@@ -139,10 +145,10 @@ class App extends Component {
           <br></br>
           <BigText color="black" align="center">Trabalhos recentes</BigText>
           <GridContainer>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
-            <GridBlock></GridBlock>
+            <GridBlock Link="" backgroundImage={LabGenius} previewText="Desenvolvimento da aplicação web."/>
+            <GridBlock Link="https://www.facebook.com/betoscabeleireirosnovaodessa/" backgroundImage={Betos} previewText="Identidade visual e artes publicitárias."/>
+            <GridBlock Link="" backgroundImage={Artesinai} previewText="Desenvolvedor do Site."/>
+            <GridBlock Link="https://www.facebook.com/coradiniimoveis/" backgroundImage={Coradini} previewText="Identidade visual e artes publicitárias."/>
           </GridContainer>
           <br></br>
           <br></br>

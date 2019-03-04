@@ -7,8 +7,14 @@ class Paragraph extends Component {
         if(this.props.color){
             style.color = this.props.color
         }
+
+        var classname = "Paragraph";
+        if(this.props.position){    
+            classname += " " + this.props.position;
+            
+        }
         return(
-            <p align={this.props.align} style={style} className="Paragraph">{this.props.children}</p>
+            <p align={this.props.align} style={style} className={classname}>{this.props.children}</p>
         );
     }
 }

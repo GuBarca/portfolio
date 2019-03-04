@@ -4,12 +4,12 @@ import './Image.css';
 class Image extends Component {
     render(){
         var style = {};
-        if(this.props.align == "center"){
+        if(this.props.align === "center"){
             style.position = "relative";
             style.left = "50%";
             style.transform = "translateX(-50%)";
         }
-        if(this.props.float == "bottom"){
+        if(this.props.float === "bottom"){
             style.position = "absolute";
             style.bottom = "0";
         }
