@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './Button.css';
 
 class CircularButtonImage extends Component {
+
+    redirect(){
+        window.location = this.props.Link;
+    }
+
     render(){
         var style = {};
         if(this.props.size){
@@ -22,7 +27,7 @@ class CircularButtonImage extends Component {
         }
 
         return (
-            <button style={style} className="circular-button-image"/>
+            <button style={style} onClick={this.redirect.bind(this)} className="circular-button-image"/>
         );
     }
 }

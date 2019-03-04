@@ -26,6 +26,8 @@ import LabGenius from './assets/images/labgenius.jpg';
 import Coradini from './assets/images/coradini.jpg';
 import Betos from './assets/images/betos.jpg'
 import Artesinai from './assets/images/artesinai.jpg';
+import Mail from './assets/images/envelope.png';
+import ReactLogo from './assets/images/react.png';
 import './App.css';
 
 
@@ -138,7 +140,7 @@ class App extends Component {
 
           </Container>
         </Section>
-        <Section height="500px">
+        <Section height="500px" >
           <br></br>
           <br></br>
           <br></br>
@@ -155,14 +157,24 @@ class App extends Component {
           <br></br>
         </Section>
         <Line/>
-        <Section height="500px">
-          <RegularText mtop="100px" color="black" align="center">Conheça mais de mim!</RegularText>
+        <Section height="500px" >
+          <MediumText marginTop="100px" color="#0042EB" align="center">Conheça mais de mim!</MediumText>
+          <Subtitle align="center">Acesse minhas outras redes sociais e veja mais:</Subtitle>
           <Container>
             <Wrapper align="xcenter">
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Logo}/>
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Linkedin}/>
-              <CircularButtonImage margin="20px" size="60px" color="gray" backgroundImage={Github}/>
+              <CircularButtonImage Link="mailto:gustavogb2@gmail.com" margin="20px" size="60px" color="#0042EB" backgroundImage={Mail}/>
+              <CircularButtonImage Link="https://www.linkedin.com/in/gustavo-barca/" margin="20px" size="60px" color="#0042EB" backgroundImage={Linkedin}/>
+              <CircularButtonImage Link="https://github.com/GuBarca" margin="20px" size="60px" color="#0042EB" backgroundImage={Github}/>
             </Wrapper>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Paragraph color="#0042EB" align="center">Site feito por mim: Gustavo Barca</Paragraph>
+            <br></br>
+            <br></br>
+            <Paragraph align="center">Made with</Paragraph>
+            <Image align="center" path={ReactLogo} width="100px"/>
+            
           </Container>
         </Section>
 
