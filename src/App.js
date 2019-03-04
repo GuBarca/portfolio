@@ -19,8 +19,12 @@ import Line from './components/line/Line';
 import CircularButtonImage from './components/button/CircularButtonImage';
 import Linkedin from './assets/images/linked-in-logo.png';
 import Github from './assets/images/github-logo.png';
-import './App.css';
 import Wrapper from './components/wrapper/Wrapper';
+import Computer from './assets/images/software2.png';
+import Data from './assets/images/data.svg';
+import Svg from './components/image/Svg';
+import './App.css';
+
 
 class App extends Component {
   render() {
@@ -31,6 +35,15 @@ class App extends Component {
           <Container>
             <BigText color="black" align="center">Designer, Web & Software developer.</BigText>
             <Subtitle align="center">Desenvolvo e crio umas coisas ai.</Subtitle>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Svg align="center" path={Computer} width="400px"></Svg>
           </Container>
         </Section>
 

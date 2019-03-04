@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './Image.css';
 
-class Image extends Component {
+class Svg extends Component {
     render(){
         var style = {};
         if(this.props.align == "center"){
@@ -19,4 +19,4 @@ class Image extends Component {
     }
 }
 
-export default Image;
+export default Svg;
