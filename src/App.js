@@ -147,7 +147,7 @@ class App extends Component {
           <br></br>
           <BigText color="black" align="center">Trabalhos recentes</BigText>
           <GridContainer>
-            <GridBlock Link="" backgroundImage={LabGenius} previewText="Desenvolvimento da aplicação web."/>
+            <GridBlock Link="https://labgeniusacademy.000webhostapp.com/" backgroundImage={LabGenius} previewText="Desenvolvimento da aplicação web."/>
             <GridBlock Link="https://www.facebook.com/betoscabeleireirosnovaodessa/" backgroundImage={Betos} previewText="Identidade visual e artes publicitárias."/>
             <GridBlock Link="" backgroundImage={Artesinai} previewText="Desenvolvedor do Site."/>
             <GridBlock Link="https://www.facebook.com/coradiniimoveis/" backgroundImage={Coradini} previewText="Identidade visual e artes publicitárias."/>
